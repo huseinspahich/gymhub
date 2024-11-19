@@ -1,44 +1,38 @@
-<%- include('partials/header') %>
-<div class="container d-flex justify-content-center align-items-center vh-100">
+<%- include(`partials/header`) %>
 
-    <div class="container">
-        <h1>Register</h1>
-    
-        <div class="row">
-          <div class="col-sm-8">
-            <div class="card">
-              <div class="card-body">
-    
-                <form action="/register" method="POST">
-                  <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" class="form-control" name="username">
-                  </div>
-                  <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" class="form-control" name="password">
-                  </div>
-                  <button type="submit" class="btn btn-dark mt-3">Register</button>
-                </form>
-    
-              </div>
+<section class="vh-100 bg-body-tertiary">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card shadow-2-strong" style="border-radius: 1rem;">
+          <div class="card-body p-5 text-center pt-0">
+            <img src="images/fitness-gym-logo-gym-sports-logo-creative-design-vector.jpg" alt="" height="220px" width="220px">
+            <h3 class="mb-5">Sign Up</h3>
+          <form action="/register" method="POST">
+            <div data-mdb-input-init class="form-outline mb-4">
+              <input  class="form-control form-control-lg" placeholder="Full Name"/>
             </div>
-          </div>
-    
-          <div class="col-sm-4">
-            <div class="card">
-              <div class="card-body">
-                <a class="btn btn-block" href="/auth/google" role="button">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 0 488 512"><path d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"/></svg>
-                  Sign In with Google
-                </a>
-              </div>
+            <div data-mdb-input-init class="form-outline mb-4">
+              <input class="form-control form-control-lg" placeholder="Username"/>
             </div>
+            <div data-mdb-input-init class="form-outline mb-4">
+              <input type="email" id="typeEmailX-2" class="form-control form-control-lg" placeholder="Email"  name="username"/>
+            </div>
+            <div data-mdb-input-init class="form-outline mb-4">
+              <input type="password" id="typePasswordX-2" class="form-control form-control-lg" placeholder="Password"  name="password"/>
+            </div>
+            <div class="form-check d-flex justify-content-start mb-4 p-0">
+              <a href="/login" class="register-link">Already have an account?</a>
+            </div>
+
+            <button data-mdb-button-init data-mdb-ripple-init class="btn btn-dark btn-lg btn-block" type="submit">Sign Up</button>
+          </form>
           </div>
-    
         </div>
       </div>
-</div>
+    </div>
+  </div>
+</section>
 
 
-<%- include('partials/footer') %>
+<%- include(`partials/footer`) %>
