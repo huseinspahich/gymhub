@@ -64,6 +64,9 @@ app.get("/site", (req,res) => {
         res.redirect("/login");   
     }
 });
+app.get("/protected", (req,res) => {
+        res.render("protected.ejs")
+})
 
 app.get('/auth/google',
     passport.authenticate('google', { scope:
