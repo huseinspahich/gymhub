@@ -51,7 +51,7 @@ const setRefreshTokenInCookie = (res, refreshToken) => {
     res.setHeader('Set-Cookie', cookie.serialize('refreshToken', refreshToken, {
         httpOnly: true,
         secure: process.env.NODE_ENV === 'production',
-        maxAge: 7 * 24 * 60 * 60, // 7 days
+        maxAge: 7 * 24 * 60 * 60, 
         sameSite: 'Strict',
         path: '/'
     }));
