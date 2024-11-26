@@ -27,4 +27,23 @@ Certain routes (e.g., /protected) are protected and require the user to be authe
 - **Passport.js**: Authentication middleware for handling local and Google OAuth strategies.    
 - **bcrypt**: For password hashing and secure authentication.   
 - **cookie**: For handling cookies, including HttpOnly cookies to store refresh tokens.  
-- **dotenv**: For environment variable management.  
+- **dotenv**: For environment variable management.
+
+
+## Getting Started
+Follow the instructions below to get local copy up and running.
+**Some features require a set up of .env file.**
+### Installation
+1. Clone the repo
+   ```sh
+   git clone https://github.com/huseinspahich/bookify.git
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+3. Run command below to start the application.
+   ```sh
+   node index.js
+   ```
+   Website home page can be accessed on http://localhost:3000.
