@@ -97,7 +97,6 @@ const checkUserEmail = (req, res, next) => {
     }
 };
 
-// Ruta za /protected koja koristi checkUserEmail middleware
 app.get("/protected", checkUserEmail, (req, res) => {
     res.render("protected.ejs");
 });
@@ -137,7 +136,6 @@ app.post("/register", async (req, res) => {
                     // Set refresh token in HttpOnly cookie
                     setRefreshTokenInCookie(res, refreshToken);
 
-                    // Send access token in the response body
                     res.json({ accessToken, message: 'Registration successful!' });
                 }
             });
@@ -235,7 +233,7 @@ app.post("/refresh-token", (req, res) => {
     });
 });
 
-// Start server
+
 app.listen(port, () => {
     console.log(`Server running on port ${port}`);
 });
